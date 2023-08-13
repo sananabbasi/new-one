@@ -1,0 +1,11 @@
+.body{
+    color: rgb(255,255,255);
+}
+
+    .navbar-brand{
+        color: rgb(230,0,35);
+    }
+.btn .btn-danger:hover{
+
+   background-color: #800020;
+}
