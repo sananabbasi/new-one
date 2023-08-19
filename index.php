@@ -5,9 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pintrest</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet"    src="css/css1.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+      .carousel .carousel-indicators{
+        top: 0;
+        margin-top: 180px;
+      
+      }
+.carousel .carousel-indicators button {
+    width: 10px;
+   height: 10px;
+   border-radius: 100%;
+   
+   
+ }
+ .animate__animated.animate__backOutUp{
+  --animate-duration: 5s;
+}
+
+</style>
 </head>
 <body>
+
+
+<!--------- Top Nav Bar -------------->
+
     <nav class="navbar navbar-expand-lg navbar-light " style="padding:19px;color:#FFFFFF">
         <div class="container-fluid " style="margin 20px;">
           <a class="navbar-brand "  href="#" style="color:#CC0000; font-weight:600">
@@ -26,7 +53,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
             <ul class="navbar-nav">
               <li class="nav-item " style="padding:0px 10px; font-weight:600; color:#111111">
-                <a class="nav-link " style="font-weight:600; color: #111111; " aria-current="page" href="#">About</a>
+                <a class="nav-link " style="font-weight:600; color: #111111;" aria-current="page" href="#">About</a>
               </li>
               <li class="nav-item "style="padding:0px 10px; font-weight:600; color:#111111;font-size: 16px">
                 <a class="nav-link" href="#" style="font-weight:600; color: #111111; ">Bussines</a>
@@ -43,6 +70,48 @@
 
         </div>
       </nav>
+      
+
+<!-------2nd nav bar---->
+<h5 style="font-size: 60px; font-weight: 600;" class="text-center">Get your next</h5>
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators" style="color:#030303">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="images/sliders/slide1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 10px; font-size: 60px; font-weight: 600; color:#C28B00; ">
+        
+        <p class="animate__animated animate__backOutUp" style="color: green;">Weekend Dinner Idea</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/sliders/slide2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 100px; font-size: 60px; font-weight: 600; color: #800020; ">
+  
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/sliders/slide3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 100px; ">
+      
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     
 </body>
 </html>
