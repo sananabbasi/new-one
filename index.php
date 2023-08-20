@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="en fp-enabled" lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <style>
+      
       .carousel .carousel-indicators{
         top: 0;
         margin-top: 180px;
@@ -25,7 +26,43 @@
    
  }
  .animate__animated.animate__backOutUp{
-  --animate-duration: 5s;
+  --animate-duration: 8s;
+}
+
+.my-btn-red
+{
+  margin:0px 5px;
+  color: #fff;
+  background-color:#E60023; 
+  font-weight:600;
+}
+.my-btn-red:hover {
+  background-color: #ad081b;  
+}
+
+.my-btn-gray {
+margin:0px 5px; 
+background-color:#EFEFEF;
+color:#111111;
+ font-weight:600;"
+ 
+}
+.my-btn-gray:hover{
+  background-color:#d0d0d0;
+  color:#111111;
+}
+.idea-btn{
+background-color: #C31952;
+color:#FFFD92;
+font-weight:700;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 </style>
@@ -35,7 +72,7 @@
 
 <!--------- Top Nav Bar -------------->
 
-    <nav class="navbar navbar-expand-lg navbar-light " style="padding:19px;color:#FFFFFF">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light " style="padding:20px;color:#FFFFFF; background-color:#fff;">
         <div class="container-fluid " style="margin 20px;">
           <a class="navbar-brand "  href="#" style="color:#CC0000; font-weight:600">
             
@@ -61,8 +98,8 @@
               <li class="nav-item"style="padding:0px 10px; font-weight:600; color:#111111">
                 <a class="nav-link" href="#" style="font-weight:600; color: #111111; ">Blog</a>
               </li>
-              <a class="btn btn-danger rounded-pill " style="margin:0px 5px;background-color:#E60023; font-weight:600">Log in </a>
-              <a class="btn btn-secondary rounded-pill" style="margin:0px 5px; background-color:#EFEFEF;color:#111111; font-weight:600"> Sign up</a>
+              <a class="btn rounded-pill my-btn-red">Log in </a>
+              <a class="btn  rounded-pill my-btn-gray"> Sign up</a>
             </ul>
           </div>
 
@@ -73,8 +110,8 @@
       
 
 <!-------2nd nav bar---->
-<h5 style="font-size: 60px; font-weight: 600;" class="text-center">Get your next</h5>
-<div id="carouselExampleIndicators" class="carousel slide">
+<h5 style="font-size: 60px; font-weight: 600;padding-top:100px;margin-top:150px" class="text-center">Get your next</h5>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators" style="color:#030303">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -83,35 +120,55 @@
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="2000">
       <img src="images/sliders/slide1.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 10px; font-size: 60px; font-weight: 600; color:#C28B00; ">
+      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 10px; font-size: 70px; font-weight: 600; color:#C28B00; ">
         
-        <p class="animate__animated animate__backOutUp" style="color: green;">Weekend Dinner Idea</p>
+        <p class="animate__animated animate__backOutUp" style="color: #C28B00;">Weeknight Dinner Idea</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="images/sliders/slide2.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 100px; font-size: 60px; font-weight: 600; color: #800020; ">
+      <img src="images/sliders/slide.2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 10px; font-size: 70px; font-weight: 600; color: #800020; ">
   
-        <p>Some representative placeholder content for the third slide.</p>
+        <p  class="animate__animated animate__backOutUp" style="color: #618C7B;">home decor idea</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="images/sliders/slide3.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 100px; ">
+      <img src="images/sliders/slide.3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-dark" style="top: 0; margin-top: 10px;  font-size: 70px; font-weight: 600; ">
       
-        <p>Some representative placeholder content for the third slide.</p>
+        <p class="animate__animated animate__backOutUp" style="color:#0076D3">new look outfit</p>
       </div>
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+   </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button>
+   </button>
+    </div>
+    <!------------slide2------->
+
+
+<div class="yellow-div" style="background-color:#FFFD92; height:100vh; position: relative;">
+       <div class="row ">
+      <div class="col-md-7">
+         <h5>easy chicken dinner</h5>
+         
+       </div>
+       <div class="col-md-5">
+        <div class="text-center vertical-center">
+         <h1 style="font-size:60px; font-weight:700; color:#C31952;">Search for an idea</h1>
+         <p style="font-size:24px; font-weight: 400; color:#C31952">What do you want to try next? Think<br> of something you’re into—like “easy<br> chicken dinner”—and see what you<br> find.</p>
+         <a type="button" class="btn idea-btn">Explore </a>
+        </div>
+       </div>
+
 </div>
-    
+</div>
+
+      
 </body>
 </html>
