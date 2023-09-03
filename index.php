@@ -55,6 +55,7 @@ color:#111111;
 background-color: #C31952;
 color:#FFFD92;
 font-weight:700;
+border-radius: 20px;
 }
 
 .vertical-center {
@@ -64,6 +65,23 @@ font-weight:700;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.slide1img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 23%;
+}
+.bgimage{
+  
+  background-image: url('images/slide2/Example.png');
+  opacity: 0.5;
+    background-color: #000;
+}
+.loginpage{
+  font-size:70px; font-weight:600px; color:#FFFFFF;
+}
+
+
 
 </style>
 </head>
@@ -155,18 +173,34 @@ font-weight:700;
 <div class="yellow-div" style="background-color:#FFFD92; height:100vh; position: relative;">
        <div class="row ">
       <div class="col-md-7">
-         <h5>easy chicken dinner</h5>
+        <div class="imgwraper" style="position: relative">
+        <img  src="images/slide2/download.jpg" style="right: 210px;top:100px; position:absolute; height:218px; width:178px; border-radius: 25%;">
+        <img  src="images/slide2/download (1).jpg" style="right: 540px;top:260px; position:absolute; height:285px; width:204px; border-radius: 25%;">
+        <img  src="images/slide2/download (2).jpg" style="right: 210px;top:470px; position:absolute; height:258px; width:164px; border-radius: 25%;">
+        
+        <img  src="images/slide2/download (3).jpg" style="right:300px;top:200px; position:absolute; height:456px; width:298px; border-radius: 15%;">
+</div>
+
+         <h5 class="dinner">easy chicken dinner</h5>
          
        </div>
        <div class="col-md-5">
         <div class="text-center vertical-center">
-         <h1 style="font-size:60px; font-weight:700; color:#C31952;">Search for an idea</h1>
+         <h1 style="font-size:60px; font-weight:700; color:#C31952;">Your Ideas Await</h1>
          <p style="font-size:24px; font-weight: 400; color:#C31952">What do you want to try next? Think<br> of something you’re into—like “easy<br> chicken dinner”—and see what you<br> find.</p>
          <a type="button" class="btn idea-btn">Explore </a>
         </div>
        </div>
 
 </div>
+</div>
+<!-- Background image -->
+<div class="bgimage">
+  
+
+<h1 class="loginpage">Become a part of the world of ideas</h1>
+
+
 </div>
 
       
