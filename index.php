@@ -72,16 +72,44 @@ border-radius: 20px;
   border-radius: 23%;
 }
 .bgimage{
-  
-  background-image: url('images/slide2/Example.png');
-  opacity: 0.5;
-    background-color: #000;
+    height: 800px;
+    width: 100vw;
+    background: black;
+    overflow: hidden;
+    background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/slide2/Example.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/slide2/Example.png"); /* The least supported option. */
+}
+img {
+   object-fit: cover;
 }
 .loginpage{
   font-size:70px; font-weight:600px; color:#FFFFFF;
+  text-align: center; padding-top: 200px;
 }
+.btn-cont{
+  margin:0px 5px;
+  color: #fff;
+  background-color:#E60023; 
+  font-weight:600;
+size: 500;
 
+}
+.btn-cont:hover {
+  background-color: #ad081b;  
+}
+.btn-facbook{
+  margin:0px 5px;
+  color: #fff;
+  background-color:#1877F2; 
+  font-weight:600;
+size: 500;
 
+}
+.btn-facbook:hover{
+  background-color:#1877F2;
+
+}
 
 </style>
 </head>
@@ -195,12 +223,119 @@ border-radius: 20px;
 </div>
 </div>
 <!-- Background image -->
+
 <div class="bgimage">
+  <div class="row">
+   <div class="col-md-6">
+     <h1 class="loginpage">Become a<br>part of the<br>world of<br>ideas</h1>
+    </div>
+
+    
+   <div class="col-md-6 " align="center">
+
+<div>
+
+
+              <!---form----->
+   <form action="submitform.php"class="" style="background-color:#fff; padding:10px 50px 5px 50px;margin-top:10px; border-radius:20px;width:500px; text-align: left;">
+   
+   
+   <div class="text-center" >
+<img class="text-center" src="images/logo/logo.jpg" style="height: 39px; width:39px; margin-top: 15px;">
+<h2 style="font-size: 32px;font-weigt: 600;margin-top:20px;">Welcome to Pinterest </h2>
+<p class="text-center">Find new ideas to try</p>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+
+       <div class="">
+       <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   
+  </div>
 
-<h1 class="loginpage">Become a part of the world of ideas</h1>
+
+         </div>
+
+      <div class="">
+      <div class="mb-1">
+      <label for="inputPassword5" class="form-label">Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<div id="passwordHelpBlock" class="form-text">
+</div>
+         </div>
+      </div>
+
+     </div>
+     <div class="row">
+       <div class=" ">
+      <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
+      <input name="date1" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  
+      </div>
+     </div>
+    </div>
 
 
+
+
+  <div style="margin-bottom:5px;">
+
+    <input type="submit" class="btn rounded-pill d-grid gap-2 col-8 mx-auto btn btn-cont" value="Continue">
+</div>
+
+
+    <p class="text-center"style="font-size: 14px; font-weight:700;">OR</p>
+    
+    <div>
+
+    <input type="submit" class="btn rounded-pill d-grid gap-2 col-8 mx-auto btn btn-facbook" value="Continue with Facebook">
+    </div>
+
+<div style="margin-top:10px">
+    <input type="submit" class="btn rounded-pill d-grid gap-2 col-8 mx-auto btn btn-google" value="Continue with Google">
+</div>
+
+<!-----continue-->
+
+<div>
+  <p class="text-center"style="font-size: 12px; font-weight:400;">By continuing, you agree to pintrest's<br>
+  Term of Services and acknowledge you'ev read our<br>
+  privacy police. notice at collection</p> 
+  <p class="text-center"style="font-size: 12px; font-weight:400;" >Already a member? <a class="text-dark" href="#">Log in</a></p>
+</div>
+   
+
+  
+</form> 
+</div>
+
+
+<div style="border-radius:0px 0px 32px 32px; width:500px;">
+<footer class="text-center text-white" style="background-color: #fff;">
+  <!-- Grid container -->
+  <div class="container p-4"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <a class="text-dark" href="https://mdbootstrap.com/">Creat a free bussines account</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</div>
+
+
+
+
+       </div>
+
+</div>
 </div>
 
       
