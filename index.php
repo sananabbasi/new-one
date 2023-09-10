@@ -85,7 +85,7 @@
     }
 
     .bgimage {
-      height: 800px;
+      height: 870px;
       width: 100vw;
       background: black;
       overflow: hidden;
@@ -294,7 +294,7 @@
   <!-- Background image -->
 
   <div class="bgimage">
-    <div class="row">
+    <div class="row" style="margin-top:20px;margin-bottom:30px;">
       <div class="col-md-6">
         <h1 class="loginpage">Become a<br>part of the<br>world of<br>ideas</h1>
       </div>
@@ -461,7 +461,17 @@
 
     </div>
   </div>
-
+                  </div>  
+       <div style="margin-top:0px;">           
+  <footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+                  </div>
 
 </body>
 
