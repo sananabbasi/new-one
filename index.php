@@ -355,7 +355,7 @@
                         x.type = "text";
                         $("#onclickbtn").removeClass("fa-solid fa-eye").addClass("fa-regular fa-eye-slash");
                         $("#onclickbtn").attr({
-                          "title" : "Hide password"
+                          "title" : "Hide password",
                           
                         });
 
