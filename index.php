@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html class="en fp-enabled" lang="en">
 
@@ -293,7 +296,7 @@
   </div>
   <!-- Background image -->
 
-  <div class="bgimage">
+  <div class="bgimage" id="bgimage">
     <div class="row" style="margin-top:20px;margin-bottom:30px;">
       <div class="col-md-6">
         <h1 class="loginpage">Become a<br>part of the<br>world of<br>ideas</h1>
@@ -306,7 +309,7 @@
 
 
           <!---form----->
-          <form action="submitform.php" class=""
+          <form action="submitform.php" class="" method="post"
             style="background-color:#fff; padding:10px 50px 5px 50px;margin-top:10px; border-top-left-radius:25px; border-top-right-radius:25px;	 width:480px; text-align: left; ">
 
 
@@ -326,8 +329,26 @@
                     <label for="exampleInputEmail1" class="form-label">Email</label>
                     <input type="email" class="form-control"
                       style="border-radius:15px;border:2px solid #ccc; height:48px;" placeholder="Email"
-                      id="exampleInputEmail1" aria-describedby="emailHelp">
+                      id="exampleInputEmail1" aria-describedby="emailHelp" name="useremail">
+                   
+                   
+                      <small class="text-danger">
+                    <?php
 
+        
+
+
+                    if(isset($_SESSION['seesionerrors'])){
+                      $message = $_SESSION['seesionerrors']['email'];
+                      echo $message;
+                    }
+
+
+
+                      
+                  ?>
+
+                    </small>
                   </div>
 
 
@@ -338,13 +359,25 @@
                     <label for="inputPassword5" class="form-label">Password</label>
                     <input type="password" id="inputPassword5" class="form-control"
                       style="border-radius:15px;border:2px solid #ccc; height:48px;" placeholder="Password"
-                      aria-describedby="passwordHelpBlock" id="passwordHelpBlock" class="form-text">
+                      aria-describedby="passwordHelpBlock" id="passwordHelpBlock" class="form-text" name="userpassword">
 
                     <i class="fa-solid fa-eye" data-toggle="tooltip" data-placement="right" title="Show password" style="position:absolute; top:58%; right:10%; cursor: pointer;"
                       id="onclickbtn"></i>
 
+                      <small class="text-danger">
+                        <?php
+                        if(isset($_SESSION['seesionerrors'])){
+                          $message = $_SESSION['seesionerrors']['password'];
+                          echo $message;
+                        }
+                        ?>   
+
+                      </small>
+
                   </div>
                 </div>
+
+
                 <script>
                   $(document).ready(function () {
 
@@ -382,13 +415,13 @@
                 <div class=" ">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
-                    <i class="fa-solid fa-circle-info" id="mybtn" data-toggle="tooltip" data-placement="right" title="Sample tooltip text"></i>
+                    <i class="fa-solid fa-circle-info" id="mybtn" data-toggle="tooltip" data-placement="right" title="Sample tooltip text" name="dob"></i>
                     <script>
                     $(function() {
                       $('#mybtn').tooltip();
                     });
                     </script>
-                    <input name="date1" type="date" class="form-control"
+                    <input name="dobirth" type="date" class="form-control "
                       style="border-radius:15px;border:2px solid #ccc; height:48px;" id="exampleInputEmail1"
                       aria-describedby="emailHelp">
 
@@ -474,5 +507,8 @@
                   </div>
 
 </body>
-
+<?php
+session_unset();
+session_destroy();
+?>
 </html>
