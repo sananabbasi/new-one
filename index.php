@@ -338,7 +338,7 @@ session_start();
         
 
 
-                    if(isset($_SESSION['seesionerrors'])){
+                    if(isset($_SESSION['seesionerrors']['email'])){
                       $message = $_SESSION['seesionerrors']['email'];
                       echo $message;
                     }
@@ -366,7 +366,7 @@ session_start();
 
                       <small class="text-danger">
                         <?php
-                        if(isset($_SESSION['seesionerrors'])){
+                        if(isset($_SESSION['seesionerrors']['password'])){
                           $message = $_SESSION['seesionerrors']['password'];
                           echo $message;
                         }
