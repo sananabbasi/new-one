@@ -13,7 +13,9 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
   <link rel="stylesheet" src="css/css1.css">
@@ -21,6 +23,8 @@ session_start();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
   <style>
     .carousel .carousel-indicators {
       top: 0;
@@ -288,7 +292,7 @@ session_start();
           <p style="font-size:24px; font-weight: 400; color:#C31952">What do you want to try next? Think<br> of
             something you’re into—like “easy<br> chicken dinner”—and see what you<br> find.</p>
           <a type="button" class="btn idea-btn">Explore </a>
-          
+
         </div>
       </div>
 
@@ -308,8 +312,8 @@ session_start();
         <div>
 
 
-          <!---form----->
-          <form action="submitform.php" class="" method="post"
+          <!-- form1 -->
+          <form action="submitform.php" class="" id="form1" method="post"
             style="background-color:#fff; padding:10px 50px 5px 50px;margin-top:10px; border-top-left-radius:25px; border-top-right-radius:25px;	 width:480px; text-align: left; ">
 
 
@@ -330,23 +334,23 @@ session_start();
                     <input type="email" class="form-control"
                       style="border-radius:15px;border:2px solid #ccc; height:48px;" placeholder="Email"
                       id="exampleInputEmail1" aria-describedby="emailHelp" name="useremail">
-                   
-                   
-                      <small class="text-danger">
-                    <?php
-
-        
 
 
-                    if(isset($_SESSION['seesionerrors']['email'])){
-                      $message = $_SESSION['seesionerrors']['email'];
-                      echo $message;
-                    }
+                    <small class="text-danger">
+                      <?php
 
 
 
-                      
-                  ?>
+
+                      if (isset($_SESSION['seesionerrors']['email'])) {
+                        $message = $_SESSION['seesionerrors']['email'];
+                        echo $message;
+                      }
+
+
+
+
+                      ?>
 
                     </small>
                   </div>
@@ -361,18 +365,18 @@ session_start();
                       style="border-radius:15px;border:2px solid #ccc; height:48px;" placeholder="Password"
                       aria-describedby="passwordHelpBlock" id="passwordHelpBlock" class="form-text" name="userpassword">
 
-                    <i class="fa-solid fa-eye" data-toggle="tooltip" data-placement="right" title="Show password" style="position:absolute; top:58%; right:10%; cursor: pointer;"
-                      id="onclickbtn"></i>
+                    <i class="fa-solid fa-eye" data-toggle="tooltip" data-placement="right" title="Show password"
+                      style="position:absolute; top:58%; right:10%; cursor: pointer;" id="onclickbtn"></i>
 
-                      <small class="text-danger">
-                        <?php
-                        if(isset($_SESSION['seesionerrors']['password'])){
-                          $message = $_SESSION['seesionerrors']['password'];
-                          echo $message;
-                        }
-                        ?>   
+                    <small class="text-danger">
+                      <?php
+                      if (isset($_SESSION['seesionerrors']['password'])) {
+                        $message = $_SESSION['seesionerrors']['password'];
+                        echo $message;
+                      }
+                      ?>
 
-                      </small>
+                    </small>
 
                   </div>
                 </div>
@@ -388,8 +392,8 @@ session_start();
                         x.type = "text";
                         $("#onclickbtn").removeClass("fa-solid fa-eye").addClass("fa-regular fa-eye-slash");
                         $("#onclickbtn").attr({
-                          "title" : "Hide password",
-                          
+                          "title": "Hide password",
+
                         });
 
                       } else {
@@ -405,21 +409,22 @@ session_start();
 
                 </script>
                 <script>
-                    $(function() {
-                      $('#onclickbtn').tooltip();
-                    });
-                    </script>
+                  $(function () {
+                    $('#onclickbtn').tooltip();
+                  });
+                </script>
 
               </div>
               <div class="row">
                 <div class=" ">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
-                    <i class="fa-solid fa-circle-info" id="mybtn" data-toggle="tooltip" data-placement="right" title="Sample tooltip text" name="dob"></i>
+                    <i class="fa-solid fa-circle-info" id="mybtn" data-toggle="tooltip" data-placement="right"
+                      title="Sample tooltip text" name="dob"></i>
                     <script>
-                    $(function() {
-                      $('#mybtn').tooltip();
-                    });
+                      $(function () {
+                        $('#mybtn').tooltip();
+                      });
                     </script>
                     <input name="dobirth" type="date" class="form-control "
                       style="border-radius:15px;border:2px solid #ccc; height:48px;" id="exampleInputEmail1"
@@ -434,7 +439,8 @@ session_start();
 
               <div style="margin-bottom:5px;">
 
-                <input type="submit" class="btn rounded-pill d-grid gap-2 col-9 mx-auto btn btn-cont" value="Continue">
+                <input type="submit" id="signupbtn" class="btn rounded-pill d-grid gap-2 col-9 mx-auto btn btn-cont"
+                  value="Continue">
               </div>
 
 
@@ -453,37 +459,56 @@ session_start();
                   value="Continue with Google">
               </div>
 
-              <!-----continue-->
-
-              <div style="margin-top:10px;">
-                <p class="text-center" style="font-size: 12px; font-weight:400;">By continuing, you agree to
-                  pintrest's<br>
-                  Term of Services and acknowledge you'ev read our<br>
-                  privacy police. notice at collection</p>
-                <p class="text-center" style="font-size: 12px; font-weight:400;">Already a member? <a class="text-dark"
-                    href="#">Log in</a></p>
-              </div>
-
-
 
           </form>
+          <!---------form2--- -->
+
+
+
+
+          <!-----continue-->
+          <div style="margin-top:10px;">
+            <p class="text-center" style="font-size: 12px; font-weight:400;">By continuing, you agree to
+              pintrest's<br>
+              Term of Services and acknowledge you'ev read our<br>
+              privacy police. notice at collection</p>
+            <p class="text-center" id="loginpara" style="font-size: 12px; font-weight:400;">Already a member? <a
+                class="text-dark" id="signupbtn1" href="#">Log in</a></p>
+
+            <p class="text-center d-none" id="signuppara" style="font-size: 12px; font-weight:400;">Not on pintrest
+              yet? <a class="text-dark" href="#">sign up</a></p>
+          </div>
+          <script>
+
+            $(document).ready(function () {
+
+              $('#signupbtn1').click(function (event) {
+                event.preventDefault();
+
+
+                $("#signuppara").removeClass("d-none");
+                $("#loginpara").addClass("d-none");
+              });
+
+            });
+
+          </script>
+
+
+
         </div>
 
 
         <div style="width:480px;">
           <footer class=" text-white"
             style="background-color: #fff;border-bottom-right-radius:20px;border-bottom-left-radius:20px;">
-            <!-- Grid container -->
-
-            <!-- Grid container -->
-
+            <!-- Grid container -->          
             <!-- Copyright -->
             <div class="text-center p-3"
               style="background-color: rgba(0, 0, 0, 0.2);border-bottom-right-radius:20px;border-bottom-left-radius:20px;">
               <a class="text-dark" style="text-decoration:none; font-weight:600;" href="https://mdbootstrap.com/">Creat
                 a free bussines account</a>
-            </div>
-            <!-- Copyright -->
+          </div>
           </footer>
         </div>
 
@@ -494,21 +519,21 @@ session_start();
 
     </div>
   </div>
-                  </div>  
-       <div style="margin-top:0px;">           
-  <footer class="bg-light text-center text-lg-start">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
   </div>
-  <!-- Copyright -->
-</footer>
-                  </div>
-
+  <div style="margin-top:0px;">
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
+  <?php
+  session_unset();
+  session_destroy();
+  ?>
 </body>
-<?php
-session_unset();
-session_destroy();
-?>
+
 </html>
